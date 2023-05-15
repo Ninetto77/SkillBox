@@ -14,25 +14,27 @@ public class TwoNumbersComparer : MonoBehaviour
     {
         _firstNumber = _firstNumberField.text;
         _secondNumber = _secondNumberField.text;
-        if (_firstNumber == null)
+        bool isAnyNumberNull = _secondNumber == null || _firstNumber == null;
+
+        if (isAnyNumberNull)
         {
             return;
         }
-        if (_secondNumber == null)
+
+        if (float.TryParse(_firstNumber, out float number1) && float.TryParse(_secondNumber, out float number2))
         {
-            return;
-        }
-        if (int.Parse(_firstNumber) > int.Parse(_secondNumber))
-        {
-            _rezultText.text = _firstNumber;
-        }
-        else
-        {
-            if (int.Parse(_firstNumber) < int.Parse(_secondNumber))
+            if (number1 > number2)
             {
-                _rezultText.text = _secondNumber;
+                _rezultText.text = _firstNumber;
             }
-            else _rezultText.text = "Равны";
+            else
+            {
+                if (number1 < number2)
+                {
+                    _rezultText.text = _secondNumber;
+                }
+                else _rezultText.text = "Равны";
+            }
         }
     }
        

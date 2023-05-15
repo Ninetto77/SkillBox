@@ -16,63 +16,68 @@ public class Calculator : MonoBehaviour
     {
         _firstNumber = _firstNumberField.text;
         _secondNumber = _secondNumberField.text;
-        if (_firstNumber == null)
+        bool isAnyNumberNull = _secondNumber == null || _firstNumber == null;
+
+        if (isAnyNumberNull)
         {
             return;
         }
-        if (_secondNumber == null)
+
+        if (float.TryParse(_firstNumber, out float number1) && float.TryParse(_secondNumber, out float number2))
         {
-            return;
+            _rezult = (number1 + number2).ToString();
+            _rezultText.text = _rezult;
         }
-        _rezult = (int.Parse(_firstNumber) + int.Parse(_secondNumber)).ToString();
-        _rezultText.text = _rezult;
     }
 
     public void CalculateMinusRezult()
     {
         _firstNumber = _firstNumberField.text;
         _secondNumber = _secondNumberField.text;
-        if (_firstNumber == null)
+        bool isAnyNumberNull = _secondNumber == null || _firstNumber == null;
+
+        if (isAnyNumberNull)
         {
             return;
         }
-        if (_secondNumber == null)
+        if (float.TryParse(_firstNumber, out float number1) && float.TryParse(_secondNumber, out float number2))
         {
-            return;
+            _rezult = (number1 - number2).ToString();
+            _rezultText.text = _rezult;
         }
-        _rezult = (int.Parse(_firstNumber) - int.Parse(_secondNumber)).ToString();
-        _rezultText.text = _rezult;
     }
 
     public void CalculateMultiplicateRezult()
     {
         _firstNumber = _firstNumberField.text;
         _secondNumber = _secondNumberField.text;
-        if (_firstNumber == null)
+        bool isAnyNumberNull = _secondNumber == null || _firstNumber == null;
+
+        if (isAnyNumberNull)
         {
             return;
         }
-        if (_secondNumber == null)
+        if (float.TryParse(_firstNumber, out float number1) && float.TryParse(_secondNumber, out float number2))
         {
-            return;
+            _rezult = (number1 * number2).ToString();
+            _rezultText.text = _rezult;
         }
-        _rezult = (int.Parse(_firstNumber) * int.Parse(_secondNumber)).ToString();
-        _rezultText.text = _rezult;
     }
 
     public void CalculateDivRezult()
     {
         _firstNumber = _firstNumberField.text;
         _secondNumber = _secondNumberField.text;
-        if (_firstNumber == null)
+        bool isAnyNumberNull = _secondNumber == null || _firstNumber == null;
+
+        if (isAnyNumberNull)
         {
             return;
         }
-        if (_secondNumber == null)
+        if (float.TryParse(_firstNumber, out float number1) && float.TryParse(_secondNumber, out float number2))
         {
-            return;
+            _rezult = (number1 / number2).ToString();
+            _rezultText.text = _rezult;
         }
-        _rezult = (int.Parse(_firstNumber) / int.Parse(_secondNumber)).ToString();
-        _rezultText.text = _rezult;
     }
 }
