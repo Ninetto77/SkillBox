@@ -285,6 +285,12 @@ public class GameManager : MonoBehaviour
         _stateMashine.ChangeStates(StateMashine.StateType.startGame);
     }
 
+    public void DescribeGame()
+    {
+        Time.timeScale = 0f;
+        _stateMashine.ChangeStates(StateMashine.StateType.describeGame);
+    }
+
     public void PauseGame()
     {
         Time.timeScale = 0f;

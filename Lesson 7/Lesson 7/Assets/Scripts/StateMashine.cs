@@ -9,6 +9,7 @@ public class StateMashine : MonoBehaviour
     {
         startGame,
         game,
+        describeGame,
         looseGame,
         winGame,
         pauseGame
@@ -16,6 +17,7 @@ public class StateMashine : MonoBehaviour
 
     [SerializeField] private GameObject _startGameScreen;
     [SerializeField] private GameObject _gameScreen;
+    [SerializeField] private GameObject _describeGameScreen;
     [SerializeField] private GameObject _looseGameScreen;
     [SerializeField] private GameObject _winGameScreen;
     [SerializeField] private GameObject _pauseGameScreen;
@@ -24,6 +26,7 @@ public class StateMashine : MonoBehaviour
     {
         _startGameScreen.SetActive(true);
         _gameScreen.SetActive(false);
+        _describeGameScreen.SetActive(false);
         _looseGameScreen.SetActive(false);
         _winGameScreen.SetActive(false);
         _pauseGameScreen.SetActive(false);
@@ -48,6 +51,10 @@ public class StateMashine : MonoBehaviour
             case StateType.game:
                 _gameScreen.SetActive(true);
                 _currentScreen = _gameScreen;
+                break;
+            case StateType.describeGame:
+                _describeGameScreen.SetActive(true);
+                _currentScreen = _describeGameScreen;
                 break;
             case StateType.looseGame:
                 _looseGameScreen.SetActive(true);
