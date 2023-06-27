@@ -7,12 +7,21 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
+    public static UIManager instance;
+    public GameObject _showEnterKeyScreen;
     private StateMashine stateMashine;
+    
 
     private void Awake()
     {
         stateMashine = GetComponent<StateMashine>();
+
+        if (instance == null)
+        {
+            instance = this;
+            return;
+        }
+        Destroy(this.gameObject);
     }
     public void PauseMenu()
     {
@@ -31,10 +40,25 @@ public class UIManager : MonoBehaviour
         stateMashine.ChangeStates(StateMashine.StateType.game);
     }
 
+    public void LooseGameMenu()
+    {
+        //ShowEnterKey(false);
+        stateMashine.ChangeStates(StateMashine.StateType.looseGame);
+    }
+
+    public void WinGameMenu()
+    {
+        stateMashine.ChangeStates(StateMashine.StateType.winGame);
+    }
+
     public void LoudLevel(int level)
     {
         SceneManager.LoadScene(level);
         stateMashine.ChangeStates(StateMashine.StateType.game);
     }
 
+    internal void ShowEnterKey(bool state)
+    {
+        _showEnterKeyScreen.SetActive(state);
+    }
 }

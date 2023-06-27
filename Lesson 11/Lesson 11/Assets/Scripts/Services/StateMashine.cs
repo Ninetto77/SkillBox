@@ -10,12 +10,16 @@ public class StateMashine : MonoBehaviour
     {
         mainMenu,
         game,
+        winGame,
+        looseGame,
         pauseGame,
         chooseLevel
     }
 
     [SerializeField] private GameObject _mainMenuScreen;
     [SerializeField] private GameObject _gameScreen;
+    [SerializeField] private GameObject _winGameScreen;
+    [SerializeField] private GameObject _looseGameScreen;
     [SerializeField] private GameObject _pauseGameScreen;
     [SerializeField] private GameObject _chooseLevelScreen;
     private GameObject _currentScreen;
@@ -26,6 +30,8 @@ public class StateMashine : MonoBehaviour
         {
             _mainMenuScreen.SetActive(true);
             _gameScreen.SetActive(false);
+            _winGameScreen.SetActive(false);
+            _looseGameScreen.SetActive(false);
             _pauseGameScreen.SetActive(false);
             _chooseLevelScreen.SetActive(false);
 
@@ -35,6 +41,8 @@ public class StateMashine : MonoBehaviour
         {
             _mainMenuScreen.SetActive(false);
             _gameScreen.SetActive(true);
+            _winGameScreen.SetActive(false);
+            _looseGameScreen.SetActive(false);
             _pauseGameScreen.SetActive(false);
             _chooseLevelScreen.SetActive(false);
 
@@ -62,6 +70,14 @@ public class StateMashine : MonoBehaviour
             case StateType.game:
                 _gameScreen.SetActive(true);
                 _currentScreen = _gameScreen;
+                break;
+            case StateType.winGame:
+                _winGameScreen.SetActive(true);
+                _currentScreen = _winGameScreen;
+                break;
+            case StateType.looseGame:
+                _looseGameScreen.SetActive(true);
+                _currentScreen = _looseGameScreen;
                 break;
             case StateType.pauseGame:
                 _pauseGameScreen.SetActive(true);

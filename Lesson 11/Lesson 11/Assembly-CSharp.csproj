@@ -56,10 +56,34 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ChangeAnimation.cs" />
-    <Compile Include="Assets\Scripts\StateMashine.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\FinishLevel.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Controller\CharacterControls.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\MovableObs.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Controller\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\MovePlatform.cs" />
+    <Compile Include="Assets\Scripts\Camera\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\FallPlat.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\ChangeAnimation.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\Throns.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\OpenDoor.cs" />
+    <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\DeathZone.cs" />
+    <Compile Include="Assets\Scripts\Other\GlobalStringVars.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\KillZone.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\MoveBridge.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\SetActiveObject.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\RotatePartitions.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\WallMovable.cs" />
+    <Compile Include="Assets\Scripts\Obctacles\MovePendulum.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\SavePos.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\Pendulum.cs" />
+    <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\Services\StateMashine.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\Bounce.cs" />
+    <Compile Include="Assets\ObstacleCoursePack\Scripts\FPSDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sweet Land GUI\READ ME.txt" />
@@ -695,8 +719,8 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -709,9 +733,6 @@
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -728,11 +749,14 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -743,20 +767,32 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
