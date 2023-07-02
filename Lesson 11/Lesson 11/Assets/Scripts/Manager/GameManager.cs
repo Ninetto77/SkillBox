@@ -58,8 +58,9 @@ public class GameManager : MonoBehaviour
 
     public void LooseGame()
     {
-        Time.timeScale = 0f;
-        UIManager.instance.LooseGameMenu();
+        player.gameObject.GetComponent<PlayerBehavior>().DeadPlayer();
+        //Time.timeScale = 0f;
+        //UIManager.instance.LooseGameMenu();
     }
 
     public void WinGame()

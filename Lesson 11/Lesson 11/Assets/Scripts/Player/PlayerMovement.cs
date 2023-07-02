@@ -21,6 +21,11 @@ namespace WildBall.Inputs
             body.AddForce(move * speed, ForceMode.Force);
         }
 
+        public void StopMovePlayer()
+        {
+            body.isKinematic = true;
+        }
+
 #if UNITY_EDITOR
         [ContextMenu("Reset values")]
         public void ResetValues()

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1982561194785021483}
   - component: {fileID: 6396490226418817186}
   - component: {fileID: 7824719807582033308}
+  - component: {fileID: 5303585575972334351}
   - component: {fileID: 3986708789319197662}
   - component: {fileID: 6818845829458756507}
   m_Layer: 0
@@ -161,6 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d946ac3f320b09b45b0302236f90877b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5303585575972334351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8101198528920479377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab455d28d9c9f1428e0343e40ccf239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodParticlesPrefab: {fileID: 1576405910550441450, guid: fa369524d6c490141a0b431aef62a095, type: 3}
 --- !u!95 &3986708789319197662
 Animator:
   serializedVersion: 5

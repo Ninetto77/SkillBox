@@ -84,9 +84,11 @@
     <Compile Include="Assets\Scripts\Services\StateMashine.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\Bounce.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\FPSDisplay.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Coin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sweet Land GUI\READ ME.txt" />
+    <None Include="Assets\Other\Sweet Land GUI\READ ME.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
