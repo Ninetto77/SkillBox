@@ -21,8 +21,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (canBeDead)
         {
-            StartCoroutine(WaitSomeTime());
             canBeDead = false;
+            StartCoroutine(WaitSomeTime());
         }
     }
     public void DeadPlayer()
@@ -38,7 +38,7 @@ public class PlayerBehavior : MonoBehaviour
         bloodParticles.transform.localPosition  = new Vector3(0, 0.3f, 0);
         bloodParticles.Play();
 
-        Destroy(bloodParticles.gameObject, 1f);
+        Destroy(bloodParticles.gameObject, 0.5f);
     }
 
     private IEnumerator WaitSomeTime()

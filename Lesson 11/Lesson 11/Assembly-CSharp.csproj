@@ -79,13 +79,13 @@
     <Compile Include="Assets\Scripts\Obctacles\MovePendulum.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\SavePos.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\Pendulum.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\Bonuses\Coin.cs" />
     <Compile Include="Assets\Scripts\Services\StateMashine.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\Bounce.cs" />
     <Compile Include="Assets\ObstacleCoursePack\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
-    <Compile Include="Assets\Scripts\Bonuses\Coin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Other\Sweet Land GUI\READ ME.txt" />
